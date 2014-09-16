@@ -1,0 +1,26 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 12
+    buildToolsVersion "20.0.0"
+
+    defaultConfig {
+        applicationId "com.example.physicaloidtest"
+        minSdkVersion 12
+        targetSdkVersion 12
+    }
+
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+repositories {
+    maven { url 'http://www.cattaka.net/mvn/artifact/' }
+}
+dependencies {
+    compile "net.cattaka:physicaloid-library:1.0.0"
+}
